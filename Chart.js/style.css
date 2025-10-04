@@ -1,0 +1,42 @@
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+#title h2 {
+    font-size: 32px;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffcf55;
+    margin: 0;
+}
+
+#title img {
+    width: 70px;
+    height: auto;
+    vertical-align: middle;
+    position: relative;
+}
+
+.graficos {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#myChartLine {
+    box-sizing: border-box;
+    height: 350px;
+    width: 700px;
+}
+
+#myChartBar {
+    box-sizing: border-box;
+    height: 350px;
+    width: 700px;
+}

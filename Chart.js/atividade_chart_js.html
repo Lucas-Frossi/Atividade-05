@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<body>
+    <div id="title">
+        <h2>Atividade: Chart.js 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chart.js_logo.svg/1200px-Chart.js_logo.svg.png" alt="Logo Chart.js"></h2>
+    </div>
+    <div class="graficos">
+        <canvas id="myChartLine">
+        </canvas>
+        <canvas id="myChartBar">
+        </canvas>
+    </div>
+    <script>
+        const ctxLine = document.getElementById('myChartLine');
+
+        new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+                datasets: [{
+                    label: 'Temperatura °C Média',
+                    data: [30, 29, 28, 25, 22, 23],
+                    borderWidth: 3,
+                    borderColor: '#fe6382',
+                    backgroundColor: '#fe6382'
+                }, {
+                    label: 'Umidade % Média',
+                    data: [80, 82, 80, 85, 80, 83],
+                    borderWidth: 3,
+                    borderColor: '#36a2eb',
+                    backgroundColor: '#36a2eb'
+                }],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        const ctxBar = document.getElementById('myChartBar');
+
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+                datasets: [{
+                    label: 'Temperatura °C Média',
+                    data: [22, 24, 27, 23, 20, 18],
+                    borderWidth: 1,
+                    backgroundColor: '#fe6382'
+                }, {
+                    label: 'Umidade % Média',
+                    data: [90, 89, 93, 87, 88, 82],
+                    borderWidth: 1,
+                    backgroundColor: '#36a2eb'
+                }],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
